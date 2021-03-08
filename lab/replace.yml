@@ -1,0 +1,7 @@
+- hosts: web
+  tasks:
+    - name: "Replace"
+      replace:
+        path: /var/www/default/index.html
+        regexp: "Lab7"
+        replace: "{{ inventory_hostname }}"
